@@ -16,7 +16,7 @@ services:
 
     cs371-vue:
         environment:
-            - VUE_APP_SERVER=http://170.64.174.169/api/
+            - VUE_APP_SERVER=http://170.64.136.159/api/
         container_name: cs371-vue
         deploy:
             resources:
