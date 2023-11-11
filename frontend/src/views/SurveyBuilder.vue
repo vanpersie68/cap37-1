@@ -120,10 +120,10 @@ export default {
     store.dispatch('loadSurvey', this.$route.params.id);
   },
   beforeMount() {
-    //this.updatesocket = new WebSocket(`ws://127.0.0.1:8000/ws/test/${this.$route.params.id}/`);
-    this.updatesocket = new WebSocket(`ws://170.64.174.169:8000/ws/test/${this.$route.params.id}/`);
-    this.$store.dispatch('setLockSocket', new WebSocket(`ws://170.64.174.169:8000/ws/focus/`));
-    //this.$store.dispatch('setLockSocket', new WebSocket(`ws://127.0.0.1:8000/ws/focus/`));
+    this.updatesocket = new WebSocket(`ws://127.0.0.1:8000/ws/test/${this.$route.params.id}/`);
+    //this.updatesocket = new WebSocket(`ws://170.64.174.169:8000/ws/test/${this.$route.params.id}/`);
+    //this.$store.dispatch('setLockSocket', new WebSocket(`ws://170.64.174.169:8000/ws/focus/`));
+    this.$store.dispatch('setLockSocket', new WebSocket(`ws://127.0.0.1:8000/ws/focus/`));
     this.updatesocket.onmessage = (event) => {
       const response = JSON.parse(event.data).survey_data
       // Formats data type so that it works with the current Vue code

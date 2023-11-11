@@ -89,8 +89,9 @@ export default {
       this.$router.push(`/My_Survey`)
     },
     sendInvite() {
-        const websiteUrl = process.env.VUE_APP_WEBSITE;
-        const url = `${websiteUrl}accept-invitation?token=${localStorage.getItem('token')}&id=${this.survey_id}`;
+        const websiteUrl = `http://170.64.174.169:8080/`;
+        //const websiteUrl = `https://fakenewz.info/`;
+        const url = `http://170.64.174.169:8080/accept-invitation?token=${localStorage.getItem('token')}&id=${this.survey_id}`;
 
         this.$axios
             .post('account/send-invite/', { email: this.inviteEmail,

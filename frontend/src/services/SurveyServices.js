@@ -45,6 +45,7 @@ const addSurvey = async (data) => {
   return response.data
 }
 
+//step 2
 const getSurvey = async (id) => {
   const response = await axios.get(baseUrl + `/surveys/${id}`)
   return response.data

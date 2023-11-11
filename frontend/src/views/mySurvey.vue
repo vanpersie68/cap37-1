@@ -836,7 +836,9 @@ export default {
     async finishSurvey(id) {
       let code = await SurveyServices.getSurveyCode(id)
       const data = await SurveyServices.getSurvey(id)
-      this.link = process.env.VUE_APP_WEBSITE + 'surveytaker/' + code
+      //111
+      //this.$router.push(`/surveytaker/ + ${code}`)
+      this.link = process.env.VUE_APP_WEBSITE +'surveytaker/' + code
       if (this.ifVolume && data.current_submission >= this.respondents) {
         this.$confirm(
           this.$t(
@@ -964,7 +966,7 @@ export default {
     },
     showlinkDialogVisible(code) {
       this.linkDialogVisible = true
-      this.link = process.env.VUE_APP_WEBSITE + 'surveytaker/' + code
+      this.link = process.env.VUE_APP_WEBSITE +'surveytaker/' + code
     },
     onCopy(e) {
       this.$message({

@@ -106,6 +106,7 @@ export default {
         });
     },
 
+    //step1
     async fetchSurveyName(){
        const data = await SurveyServices.getSurvey(this.surveyid)
        this.surveyname = data.name;
