@@ -89,7 +89,7 @@ export default {
       this.$router.push(`/My_Survey`)
     },
     sendInvite() {
-        const websiteUrl = `http://170.64.174.169:8080/`;
+        const websiteUrl = `http://170.64.136.159:8080/`;
         //const websiteUrl = `https://fakenewz.info/`;
         const url = `http://170.64.174.169:8080/accept-invitation?token=${localStorage.getItem('token')}&id=${this.survey_id}`;
 
